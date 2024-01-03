@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'NewYorkSmallRegular';
+  src: url('../public/font/FontsFree-Net-NewYorkSmallRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NewYorkExtraLargeRegular';
+  src: url('../public/font/FontsFree-Net-NewYorkExtraLargeRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SFMonoRegular';
+  src: url('../public/font/FontsFree-Net-SFMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SFProDisplay-Heavy';
+  src: url('../public/font/FontsFree-Net-SFProDisplay-Heavy-1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'SFProText-Light';
+  src: url('../public/font/FontsFree-Net-SFProText-Light-1.ttf') format('truetype');
+}
+
+
+
