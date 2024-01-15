@@ -1,5 +1,5 @@
 import Image from "next/image"
-import HomeImage from '../../../public/assests/homeImage.png'
+import HomeImage from '@/public/assests/homeImage.png'
 
 export default function HomeComp() {
     return (

@@ -1,9 +1,9 @@
 'use client'
 import HomeComp from "../../(componant)/homeComp/pag";
 import Image from "next/image";
-import auther from '../../../public/assests/auther.png';
-import Twiter from '../../../public/assests/vector.svg';
-import fb from '../../../public/assests/facebook 1.svg';
+import auther from '@/public/assests/auther.png';
+import Twiter from '@/public/assests/vector.svg';
+import fb from '@/public/assests/facebook 1.svg';
 import { useState, useContext } from "react";
 import { PostContext } from "@/app/context/context";
 import Link from "next/link";
@@ -17,9 +17,9 @@ interface Post {
 }
 
 export default function Blogs({ params }: any) {
-    const  {posts}  = useContext(PostContext);
-    const post = posts.find((p: Post) => (p.title) === params.slug)  
-     
+    const { posts } = useContext(PostContext);
+    const post = posts.find((p: Post) => (p.title) === params.slug)
+
     return (
         <>
             <HomeComp />
@@ -75,7 +75,7 @@ export default function Blogs({ params }: any) {
             <Link href={'/blog/'}>
                 <h1>Back To Blog</h1>
             </Link>
-            
+
 
         </>
     )

@@ -1,9 +1,9 @@
 'use client'
 import { FaTimes } from 'react-icons/fa';
-import {  onChangeEventType } from '../../types/commontypes';
+import {  onChangeEventType } from '@/types/commontypes';
 import { IoMdAdd } from "react-icons/io";
 import Image from "next/image";
-import HomeImage from '../../public/assests/homeimage.png';
+import HomeImage from '@/public/assests/homeimage.png';
 import Link from "next/link";
 import { useState, useContext } from "react";
 import { PostContext, PostContextProps } from '../context/context';

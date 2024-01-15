@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import logo from "../../../public/assests/NORDIC ROSE.svg";
-import menu from "../../../public/assests/Group 50.svg";
+import menu from "@/public/assests/Group 50.svg";
+import logo from "@/public/assests/NORDIC ROSE.svg";
 
 export default function Navbar() {
     return (
