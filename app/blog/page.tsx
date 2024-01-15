@@ -1,18 +1,17 @@
 'use client'
 import { FaTimes } from 'react-icons/fa';
-import { onChangeEventImgType, onChangeEventType } from '../../types/commontypes';
+import {  onChangeEventType } from '../../types/commontypes';
 import { IoMdAdd } from "react-icons/io";
 import Image from "next/image";
-
 import HomeImage from '../../public/assests/homeimage.png';
 import Link from "next/link";
-import { useState ,useContext} from "react";
-import { PostContext } from '../context/context';
+import { useState, useContext } from "react";
+import { PostContext, PostContextProps } from '../context/context';
 
 
 
 export default function Blog() {
-  const {posts ,addPosts}=useContext(PostContext);
+  const { posts, addPost } = useContext(PostContext) as PostContextProps;
   const [isModalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
@@ -23,7 +22,7 @@ export default function Blog() {
   const [detail, setDetail] = useState<string>('');
   const [image, setImage] = useState<File | null>(null);
   const [inputData, setInputData] = useState([{
-    id:1,
+    id: 1,
     title: '',
     detail: '',
     category: '',
@@ -32,26 +31,26 @@ export default function Blog() {
 
   const onClickHandler = () => {
     const addData = {
-      id:id++,
+      id: id++,
       title: title,
       detail: detail,
       category: category,
       image: image
     }
-    inputData.push(addData)
-    posts.push(addData)
-    // console.('inputData', inputData);
-  
+    // inputData.push(addData)
+    if (posts) {
+      inputData.push(addData);
+      posts.push(addData);
+    }
     closeModal();
     setTitle('');
     setDetail('');
     setCategory('');
     setImage(null);
     setId(id++)
-  }
-  // console.log(data);
-  // console.log(posts);
+    addPost(addData);
 
+  }
   return (
     <>
       <div className="lg:mx-[245px]">
