@@ -3,7 +3,7 @@ import { FaTimes } from 'react-icons/fa';
 import {  onChangeEventType } from '@/types/commontypes';
 import { IoMdAdd } from "react-icons/io";
 import Image from "next/image";
-import HomeImage from '@/public/assests/homeimage.png';
+import home from '@/public/assests/homeimage.png';
 import Link from "next/link";
 import { useState, useContext } from "react";
 import { PostContext, PostContextProps } from '../context/context';
@@ -54,7 +54,7 @@ export default function Blog() {
   return (
     <>
       <div className="lg:mx-[245px]">
-        <Image src={HomeImage} alt="HomeImage" className="mt-14 " />
+        <Image src={home} alt="HomeImage" className="mt-14 " />
         <p className="mt-10 text-black text-center font-newl text-3xl md:text-4xl lg:text-5xl font-bold leading-normal">A few words about this blog platform, Ghost, and how this site was made</p>
         <p className=" mt-6 mb-12 text-black text-center font-sfmono text-sm md:text-base font-normal leading-[170%]">Why Ghost (& Figma) instead of Medium, <br /> WordPress or other options? </p>
         <button
