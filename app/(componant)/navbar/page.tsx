@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image'
-import menu from "@/public/assests/Group 50.svg";
-import logo from "@/public/assests/NORDIC ROSE.svg";
-
+import menu from "@/public/assests/Group.svg";
+import logo from "@/public/assests/NORDIC1.svg";
 export default function Navbar() {
     return (
         <>
@@ -15,7 +14,6 @@ export default function Navbar() {
                     <Link href={'/link'}><li className='font-new text-black text-center text-2xl font-normal md:font-medium leading-[170%] tracking-wider uppercase hover:border-b-[6px] hover:border-[#000000] pb-8'>Link</li></Link>
                     <Link href={'/project'}><li className='font-new text-black text-center text-2xl font-normal md:font-medium leading-[170%] tracking-wider uppercase hover:border-b-[6px] hover:border-[#000000] pb-8'>Project</li></Link>
                 </ul>
-
             </section>
         </>
     )

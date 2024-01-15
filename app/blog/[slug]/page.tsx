@@ -1,11 +1,10 @@
 'use client'
 import HomeComp from "../../(componant)/homeComp/pag";
 import Image from "next/image";
-import auther from '@/public/assests/auther.png';
 import Twiter from '@/public/assests/vector.svg';
-import fb from '@/public/assests/facebook 1.svg';
+import fb from '@/public/assests/facebook.svg';
 import { useState, useContext } from "react";
-import { PostContext, PostContextProps} from "@/app/context/context";
+import { PostContext, PostContextProps } from "@/app/context/context";
 import Link from "next/link";
 
 interface Post {
@@ -18,7 +17,7 @@ interface Post {
 
 export default function Blogs({ params }: any) {
     const { posts } = useContext(PostContext) as PostContextProps;
-    const post:any = posts.find((p: Post) => (p.title) === params.slug)
+    const post: any = posts.find((p: Post) => (p.title) === params.slug)
 
     return (
         <>
@@ -27,7 +26,7 @@ export default function Blogs({ params }: any) {
                 <div className=" flex justify-between">
                     <div className="flex gap-4">
                         <div >
-                            <Image src={auther} alt="auther"></Image>
+
                         </div>
                         <div>
                             <p className="text-black font-sfdisplayh font-bold text-base uppercase">
@@ -43,7 +42,6 @@ export default function Blogs({ params }: any) {
                         <Image src={Twiter} alt="twiterLogo"></Image>
                     </div>
                 </div>
-                <p className="font-new text-black font-normal text-xl  leading-[170%] my-14">{ }</p>
                 <h1 className="text-balack font-sfdisplayh font-bold text-3xl laeading-[160%] mt-14 mb-6">{post.title}</h1>
                 <Image src={post.image instanceof File ? URL.createObjectURL(post.image) : post.image} width={400} height={200} alt="Reactangel"></Image>
                 <p className="font-new text-black font-normal text-xl  leading-[170%] my-14" >

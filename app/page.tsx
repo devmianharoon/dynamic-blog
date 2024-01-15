@@ -1,9 +1,5 @@
-import Navbar from "./(componant)/navbar/page";
 import Image from "next/image";
-import HomeImage from '../public/assests/homeimage.png'
-import ButtomBar from "./(componant)/buttombar/page";
-
-
+import HomeImage from '../public/assests/home.png'
 export default function Home() {
   return (
     <>
