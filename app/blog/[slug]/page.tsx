@@ -5,7 +5,7 @@ import auther from '@/public/assests/auther.png';
 import Twiter from '@/public/assests/vector.svg';
 import fb from '@/public/assests/facebook 1.svg';
 import { useState, useContext } from "react";
-import { PostContext } from "@/app/context/context";
+import { PostContext, PostContextProps} from "@/app/context/context";
 import Link from "next/link";
 
 interface Post {
@@ -17,8 +17,8 @@ interface Post {
 }
 
 export default function Blogs({ params }: any) {
-    const { posts } = useContext(PostContext);
-    const post = posts.find((p: Post) => (p.title) === params.slug)
+    const { posts } = useContext(PostContext) as PostContextProps;
+    const post:any = posts.find((p: Post) => (p.title) === params.slug)
 
     return (
         <>

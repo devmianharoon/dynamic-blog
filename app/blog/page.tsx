@@ -37,7 +37,6 @@ export default function Blog() {
       category: category,
       image: image
     }
-    // inputData.push(addData)
     if (posts) {
       inputData.push(addData);
       posts.push(addData);
