@@ -3,7 +3,7 @@ import HomeComp from "../../(componant)/homeComp/pag";
 import Image from "next/image";
 import Twiter from '@/public/assests/twitter.svg';
 import fb from '@/public/assests/facebook.svg';
-import { useState, useContext } from "react";
+import {  useContext } from "react";
 import { PostContext, PostContextProps } from "@/app/context/context";
 import Link from "next/link";
 
